@@ -1,3 +1,30 @@
+@media screen and (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .right-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .right-buttons-container {
+        flex-direction: column;
+    }
+    .right-container {
+        width: 100%;
+    }
+    .main > div {
+        width: 100%;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:wght@300;400&display=swap');
+
 :root {
     --redish: #ff6767;
     --white: #ffffff;
@@ -5,6 +32,8 @@
     --lightblue: #8fecff;
     --lightred: #ffbbbb;
     --lightgreen: #a0ff90;
+    --darkerlightgreen: #86d977;
+    --darkerlightblue: #74bbc9;
 }
 
 * {
@@ -16,7 +45,7 @@ body {
     width: 100%;
     padding-right: 5%;
     padding-left: 5%;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -32,14 +61,13 @@ nav {
 
 .logo {
     color: var(--redish);
-    font-weight: bolder;
+    font-weight: 800;
     text-align: center;
 }
 
 .main {
     display: flex;
     justify-content: space-between;
-    gap: 5%;
 }
 
 .main > div {
@@ -55,35 +83,80 @@ nav {
 }
 
 .card {
-    background-color: var(--redish);
+    background-color: var(--white);
     width: 48%;
-    padding: 10px;
+    max-width: 240px;
+    min-width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     box-shadow: 2px 2px 4px 4px rgba(63, 63, 63, 0.1);
     border-radius: 10px;
+    height: 280px;
+    position: relative;
 }
 
 .right-container {
     display: flex;
-    justify-content: space-between;
+    padding-left: 10px; padding-right: 10px;
+    flex-direction: column;
+}
+.right-buttons-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.right-button-learn-more, .right-button-contact-us {
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 33px;
+}
+    .right-button-learn-more {
+        background-color: var(--lightblue);
+    }
+    .right-button-contact-us {
+        background-color: var(--lightgreen);
+    }
+
+.right-button-contact-arrow {
+    border-radius: 20px;
+    background-color: var(--darkerlightgreen);
+    width: 30px;
+}
+.right-button-learn-more:hover, .right-button-contact-us:hover {
+    opacity: 70%;
+    cursor: crosshair;
+}
+.right-button-learn-more-arrow {
+    border-radius: 20px;
+    background-color: var(--darkerlightblue);
+    width: 30px;
+}
+.arrow-right {
+    text-align: center;
     padding: 10px;
+}
+.button-text {
+    padding: 4px;
 }
 
 .noticeboard {
-    width: auto;
-}
-
-.card-title-article h2{
-    font-weight: 1000;
+    width: 50%;
 }
 
 h1 {
     margin: 0 0 0 0;
+    font-weight: 800;
+    padding-top: 0;
 }
 
 .card-category {
     display: flex;
     font-size: small;
-    margin-bottom: -5px;
+    margin-bottom: -15px;
 }
 .card-category > p {
     margin-right: 7px; 
@@ -105,6 +178,12 @@ h1 {
 .category-money {
     background-color: var(--lightgreen);
 }
+.card-title-article h2{
+    font-weight: 800;
+}
+.card-title-article {
+    margin-right: 19px;
+}
 
 nav {
     display: flex;
@@ -120,4 +199,17 @@ nav a {
 nav a:hover {
     opacity: 50%;
     border-bottom: 1px solid black;
+}
+
+.card-button {
+    background-color: var(--redish);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-button:hover {
+    opacity: 80%;
 }
