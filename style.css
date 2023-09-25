@@ -1,0 +1,123 @@
+:root {
+    --redish: #ff6767;
+    --white: #ffffff;
+    --yellow: #edff9d;
+    --lightblue: #8fecff;
+    --lightred: #ffbbbb;
+    --lightgreen: #a0ff90;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    color: var(--redish);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.main > div {
+    width: 50%;
+}
+
+.cards {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.card {
+    background-color: var(--redish);
+    width: 48%;
+    padding: 10px;
+    box-shadow: 2px 2px 4px 4px rgba(63, 63, 63, 0.1);
+    border-radius: 10px;
+}
+
+.right-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.noticeboard {
+    width: auto;
+}
+
+.card-title-article h2{
+    font-weight: 1000;
+}
+
+h1 {
+    margin: 0 0 0 0;
+}
+
+.card-category {
+    display: flex;
+    font-size: small;
+    margin-bottom: -5px;
+}
+.card-category > p {
+    margin-right: 7px; 
+    border-radius: 5px; 
+    padding: 3px; 
+}
+.category-office {
+    background-color: var(--yellow);
+}
+.category-gothenburg {
+    background-color: var(--lightblue);
+}
+.category-jobs {
+    background-color: var(--lightgreen);
+}
+.category-animals {
+    background-color: var(--lightred);
+}
+.category-money {
+    background-color: var(--lightgreen);
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    margin-top: 8px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+nav a:hover {
+    opacity: 50%;
+    border-bottom: 1px solid black;
+}
